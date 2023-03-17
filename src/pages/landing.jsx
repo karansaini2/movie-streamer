@@ -12,21 +12,21 @@ const Landing = () => {
           Movie Streamer
         </h2>
 
-        <div className="mb-2 lg:hidden ">
+        <div className="mb-2 mt-4 lg:hidden ">
           <img src={bg1} className="rounded-full h-14" />
         </div>
 
-        <p className=" mt-2 text-xl text-center font-serif ">
+        <p className=" mt-2 hidden text-xl text-center font-serif lg:flex">
           One of the best webpage through which one can access all the
         </p>
-        <p className="text-xl text-center font-serif ">
+        <p className=" hidden text-xl text-center font-serif lg:flex">
           information regarding any movie you want to watch with it's ratings
         </p>
-        <p className="text-xl text-center font-serif ">
+        <p className=" mt-5 text-xl text-center font-serif lg:mt-0">
           Search and get movies as per your interests.
         </p>
 
-        <button className="bg-purple-600 text-center rounded-md text-lg w-80 h-8 lg:w-full text-white my-4 hover:bg-purple-700 mt-5">
+        <button className="bg-purple-600 text-center rounded-md text-lg w-80 h-10 lg:w-full text-white my-4 hover:bg-purple-700 mt-5">
           <Link to="/homepage">Get Started</Link>
         </button>
       </div>
