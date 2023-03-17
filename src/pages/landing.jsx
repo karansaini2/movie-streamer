@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import bg from "../assets/bg-1.jpg";
+import bg1 from "../assets/bg-2.webp";
 const Landing = () => {
   return (
     <section className=" flex justify-center items-center  bg-slate-200 min-h-screen space-x-16">
@@ -11,7 +12,11 @@ const Landing = () => {
           Movie Streamer
         </h2>
 
-        <p className="text-lg text-center font-serif">
+        <div className="mb-2 lg:hidden ">
+          <img src={bg1} className="rounded-full h-14" />
+        </div>
+
+        <p className="text-lg text-center font-serif ">
           One of the best webpage through which one can access all the
         </p>
         <p className="text-lg text-center font-serif ">
