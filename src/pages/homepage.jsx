@@ -56,7 +56,7 @@ const Homepage = () => {
             {" "}
             information regarding any movie you want to watch with it's ratings
           </p>
-          <p className=" mt-4 text-lg font-serif md:text-xl sm:mt-0 ">
+          <p className=" hidden mt-4 text-lg font-serif md:text-xl sm:mt-0 sm:flex">
             {" "}
             Search and get movies as per your interests.
           </p>
