@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <section className=" bg-slate-100 h-12 p-2">
-      <nav className="flex justify-evenly items-center space-x-10 sm:space-x-28  ">
+      <nav className="flex justify-evenly items-center space-x-7 sm:space-x-28  ">
         <h2 className="text-2xl font-semibold font-serif xs:text-3xl">
           {" "}
           Streamer
