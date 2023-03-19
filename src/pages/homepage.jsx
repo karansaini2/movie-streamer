@@ -3,45 +3,20 @@ import bg3 from "../assets/bg-3.jpg";
 import bg4 from "../assets/bg-4.jpg";
 import bg5 from "../assets/bg-5.jpg";
 import bg6 from "../assets/bg-6.jpg";
+import AddFavourite from "../components/addFavourite";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext } from "react";
 import { Link } from "react-router-dom";
 import SearchBox from "../components/searchbox";
 import MovieCard from "../components/moviecard";
 import Footer from "../components/footer";
+import { useMovies } from "../contexts/MovieContext";
 
-const Homepage = () => {
-  const [movies, setMovies] = useState([]);
-  const [search, setSearch] = useState("");
-  const [favourites, setFavourites] = useState([]);
-
-  const displayMovies = async () => {
-    const url = "https://www.omdbapi.com/?s=over&apikey=a753a8d7";
-    const response = await fetch(url);
-    const responseJson = await response.json();
-
-    setMovies(responseJson.Search);
-  };
-
-  const getMovies = async (search) => {
-    const url = `https://www.omdbapi.com/?s=${search}&apikey=a753a8d7`;
-    const response = await fetch(url);
-    const responseJson = await response.json();
-
-    if (responseJson.Search) {
-      setMovies(responseJson.Search);
-    }
-  };
-
-  useEffect(() => {
-    if (!search) {
-      displayMovies();
-    }
-    getMovies(search);
-  }, [search]);
+const Homepage = ({ children }) => {
+  const { movies } = useMovies();
 
   return (
-    <section className="bg-slate-200 min-h-screen">
+    <main className="bg-slate-200 min-h-screen">
       <Navbar />
 
       <section className="bg-white flex justify-evenly h-auto">
@@ -94,15 +69,15 @@ const Homepage = () => {
         id="search"
         className=" flex flex-col h-auto   items-center bg-slate-200 "
       >
-        <SearchBox search={search} setSearch={setSearch} />
+        <SearchBox />
 
-        <div className="flex items-start  flex-wrap  justify-center space-x-3">
-          <MovieCard movies={movies} />
+        <div className="flex items-start p-5 gap-4 flex-wrap  justify-center ">
+          <MovieCard moviestoShow={movies} />
         </div>
       </section>
 
       <Footer />
-    </section>
+    </main>
   );
 };
 
