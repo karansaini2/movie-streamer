@@ -3,7 +3,7 @@ import ReactReadMoreReadLess from "react-read-more-read-less";
 const Card = ({ movie, handleFavourite }) => {
   return (
     <div className="flex justify-center">
-      <div className="block max-w-[16rem] h-[33.2rem]  rounded-lg  shadow-lg dark:bg-white">
+      <div className="block max-w-[16rem] h-[34.4rem]  rounded-lg  shadow-lg dark:bg-white">
         <a href="#!">
           <img
             className="rounded-t-lg h-[25rem]"
@@ -21,7 +21,7 @@ const Card = ({ movie, handleFavourite }) => {
               {movie.Title}
             </ReactReadMoreReadLess>
           </h5>
-          <div className="mt-2 text-base space-x-3 ">
+          <div className="mt-3 text-base space-x-3 ">
             <button className="bg-violet-600 w-[5rem] rounded-lg text-white">
               {movie.Type}
             </button>

@@ -12,7 +12,7 @@ const Favourites = () => {
       <header>
         <Navbar />
       </header>
-      <div className="mt-3">
+      <div className="mt-4">
         <h1 className="text-center text-4xl font-serif font-semibold">
           Favourite Movies
         </h1>
