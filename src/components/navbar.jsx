@@ -9,17 +9,11 @@ const Navbar = () => {
         </h2>
 
         <ul className="flex space-x-7  sm:space-x-14">
-          <li>
-            <Link to="/">
-              {" "}
-              <i className="fa-solid fa-house-user  text-lg xs:text-xl sm:text-2xl"></i>
-            </Link>{" "}
+          <li className="text-lg font-serif p-1 hover:bg-violet-500 hover:text-white rounded-lg ">
+            <Link to="/"> Home</Link>{" "}
           </li>
-          <li>
-            <Link to="/favourites">
-              {" "}
-              <i className="fa-solid fa-star  text-lg xs:text-xl sm:text-2xl"></i>
-            </Link>
+          <li className="text-lg font-serif p-1 hover:bg-violet-500 hover:text-white rounded-lg">
+            <Link to="/favourites"> Favourites</Link>
           </li>
         </ul>
       </nav>

@@ -1,5 +1,11 @@
+import Navbar from "../components/navbar";
+
 const Favourites = () => {
-  return <section></section>;
+  return (
+    <section>
+      <Navbar />
+    </section>
+  );
 };
 
 export default Favourites;

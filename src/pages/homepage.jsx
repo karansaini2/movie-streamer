@@ -6,6 +6,9 @@ import bg6 from "../assets/bg-6.jpg";
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SearchBox from "../components/searchbox";
+import MovieCard from "../components/moviecard";
+import Footer from "../components/footer";
 
 const Homepage = () => {
   const [movies, setMovies] = useState([]);
@@ -38,7 +41,7 @@ const Homepage = () => {
   }, [search]);
 
   return (
-    <section className="bg-gray-700 min-h-screen">
+    <section className="bg-slate-200 min-h-screen">
       <Navbar />
 
       <section className="bg-white flex justify-evenly h-auto">
@@ -62,7 +65,7 @@ const Homepage = () => {
           </p>
 
           <button className="bg-purple-600 text-center rounded-2xl md:rounded-md text-lg w-52 h-10 lg:w-full text-white my-4 hover:bg-purple-700 mt-5">
-            <a href="">Search Movies</a>
+            <a href="#search">Explore Movies</a>
           </button>
         </div>
         <div
@@ -86,6 +89,19 @@ const Homepage = () => {
           className=" hidden mt-10 md:flex lg:hidden "
         ></div>
       </section>
+
+      <section
+        id="search"
+        className=" flex flex-col h-auto   items-center bg-slate-200 "
+      >
+        <SearchBox search={search} setSearch={setSearch} />
+
+        <div className="flex items-start  flex-wrap  justify-center space-x-3">
+          <MovieCard movies={movies} />
+        </div>
+      </section>
+
+      <Footer />
     </section>
   );
 };
